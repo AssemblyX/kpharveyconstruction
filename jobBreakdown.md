@@ -60,7 +60,7 @@ Code conventions are important for a number of reasons:
 - Hardly any software is maintained for its whole life by the original author.
 - If you ship your source code as a product, you need to make sure it is as well packaged and clean as any other product you create. 
 
-You own all the work and files to your entire project including any future projects we do. If at anytime you decide to go with another programmer or programming company your transition will be easy.
+**You own all the work and files to your entire project including any future projects we do. If at anytime you decide to go with another programmer or programming company your transition will be easy.**
 
 
 
