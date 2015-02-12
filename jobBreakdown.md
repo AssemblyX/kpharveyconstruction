@@ -4,7 +4,7 @@ Thank you for this opportunity and look forward to providing you services for a 
 Here is a breakdown to the Estimate provided. Please review closely and provide me with any additional information I may have missed.
 
 ## Web Hosting
-`1 year` of web hosting starting on date of job completion.
+1 year of web hosting starting on date of job completion.
 
 In 10 months we will discuss hosting service fees for the following year. Depending on how the project evolves and the amount of work involved with maintain services will determine the new yearly cost. From past experiences with dynamic business sites having user log in sections you will be looking at roughly $500 a year. Again this is a rough estimate and I have work with sites that cost $1500 per month. Just giving you this information so you are aware and prepared for the future.
 
