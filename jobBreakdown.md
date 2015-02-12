@@ -49,8 +49,10 @@ This website will not be on an SSH client. This means security will be very limi
 
 Keep in mind that if your site needs to be upgraded it is because you have a lot of traffic. This usually means your site is generating revenue and the cost for upgrading the security is absorbed by the revenue. In other words, if we need more security you are making more money to offset the costs.
 
+## Admin screens
+All admin screens will be very basic. This will save on time and expenses. Since only a limited amount of people will be using the admin screens it will not be a issue.
 
-## Your software
+## Your software is professional
 
 All my software follows the <a href="http://www.oracle.com/technetwork/java/codeconvtoc-136057.html">Oracle Java Conventions</a> with added rules.
 
