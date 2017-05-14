@@ -1,0 +1,800 @@
+@media only screen and (min-width: 1200px) {
+    .wa_main_bn_wrap figcaption h2 {
+        font-size: 58px;
+    }
+    .wa_main_bn_wrap figcaption span {
+        font-size: 23px;
+    }
+    .wa_main_bn_wrap figcaption span:before {
+        bottom: -6px;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+    .left-one-third {
+        width: 100%;
+        left: -4%;
+    }
+}
+@media only screen and (min-width: 1025px) {
+    .owl-carousel-style1 .owl-buttons {
+        left: 100%;
+        top: 50%;
+        margin-left: -30px;
+        margin-top: -35px;
+    }
+    .wa-partners .owl-buttons {
+        #left: -55px;
+        #padding-top: 5px;
+    }
+    #testimonial-section1 .owl-buttons {
+        left: -55px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .owl-carousel-style1 .owl-buttons {
+        left: 100%;
+        top: 50%;
+        margin-left: -30px;
+        margin-top: -35px;
+    }
+    .wa-partners .owl-buttons {
+        #left: -55px;
+        #padding-top: 5px;
+    }
+    #testimonial-section1 .owl-buttons {
+        left: -55px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    #top-bar .pull-left ul {
+        text-align: left;
+    }
+    #top-bar .pull-right ul {
+        text-align: right;
+    }
+    #top-bar .pull-right ul li:last-child a {
+        margin-right: 0;
+    }
+    .wa-row-only-md {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .boxed-version .left-one-third {
+        width: 63.5%;
+        left: -5%;
+    }
+    .navbar-nav > li > a {
+        padding: 15px 16px 12px;
+    }
+    .navbar>.container .navbar-brand,
+    .navbar>.container-fluid .navbar-brand {
+        padding: 10px 0px 0px;
+        margin-bottom: -20px;
+    }
+    .order-table {
+        display: table;
+        min-height: 120px;
+        width: 100%;
+    }
+    .order-table-cell {
+        display: table-cell;
+        #vertical-align: middle;
+    }
+    .order-text input {
+        margin-top: 40px;
+        display: inline-block;
+    }
+    .order-text h5 {
+        margin-top: 50px;
+        display: inline-block;
+    }
+    .order-text strong {
+        margin-top: 45px;
+        display: inline-block;
+    }
+    .rev-content .icon-list {
+        text-align: right;
+    }
+    .project-images figure {
+        max-height: 60vh;
+        overflow: hidden;
+    }
+}
+@media only screen and (max-width: 991px) {
+    #top-bar .pull-left {
+        #margin-bottom: 10px;
+    }
+    #top-bar .pull-left,
+    #top-bar .pull-right {
+        width: 100%;
+        text-align: center;
+    }
+    #top-bar ul li:after {
+        width: 0px;
+        margin-right: 0px;
+    }
+    #top-bar ul li a {
+        margin-right: 10px;
+    }
+    #main-footer .widget {
+        margin-bottom: 30px;
+    }
+    .grey-bg-sm {
+        background-color: #f2f5f6;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+    .left-one-third {
+        width: 100%;
+        left: -4%;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    .left-one-third {
+        width: 100%;
+        left: -4%;
+    }
+    .wa-partners .owl-buttons {
+        #padding-left: 5px;
+        #padding-top: 5px;
+    }
+    #testimonial-section1 .owl-buttons {
+        padding-left: 0;
+    }
+    .wa_main_bn_wrap .owl-theme .owl-pagination {
+        bottom: 20px;
+    }
+    .news-letter-heading {
+        background-size: 60px 60px;
+        padding-left: 75px;
+    }
+    .news-letter-heading h2 {
+        font-size: 24px;
+    }
+    .bottom-box {
+        font-size: 16px;
+        font-weight: 400;
+        color: #2e2e2e;
+    }
+    .theme-style-caption-text:before {
+        top: -52%;
+    }
+    .theme-style-caption h4 {
+        font-size: 14px;
+    }
+    .theme-style-caption h5 {
+        font-size: 12px;
+    }
+    .order-table {
+        display: table;
+        min-height: 120px;
+        width: 100%;
+    }
+    .order-table-cell {
+        display: table-cell;
+        #vertical-align: middle;
+    }
+    .order-text input {
+        margin-top: 40px;
+        display: inline-block;
+    }
+    .order-text h5 {
+        margin-top: 50px;
+        display: inline-block;
+    }
+    .order-text strong {
+        margin-top: 45px;
+        display: inline-block;
+    }
+    .count-area {
+        padding: 40px 0px;
+        font-size: 50px;
+    }
+    .wa-tabs .tab-btns .tab-btn span {
+        font-size: 13px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .dropdown-menu li.left-side .dropdown-menu {
+        margin-left: -200px !important;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #top-bar{
+		display:none;
+	}
+	#top-bar .pull-left {
+        #margin-bottom: 10px;
+    }
+    #top-bar .pull-left,
+    #top-bar .pull-right {
+        width: 100%;
+        text-align: center;
+    }
+    #top-bar ul li:after {
+        width: 0px;
+        margin-right: 0px;
+    }
+    #top-bar ul li a {
+        margin-right: 10px;
+    }
+	.shape{
+		display:none;
+	}
+    .navbar-nav > li > a {
+        padding: 20px 12px;
+    }
+
+	.navbar-header {
+		float: none;
+	   max-height: 100%; 
+     }
+    .pad-s30 {
+        padding: 0px 30px;
+    }
+    .pad-s15 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .marB-s30 {
+        margin-bottom: 30px;
+    }
+    .sidebar-tab .padL0 {
+        padding: 0px 15px;
+    }
+    .sidebar-tab .tab-btns {
+        margin-bottom: 15px;
+    }
+    .home-sign-up {
+        margin-left: 15px;
+        margin-right: 15px;
+        width: calc(100% - 30px);
+    }
+    .special-style {
+        width: 100%;
+    }
+    .wa-partners .owl-buttons {
+        #padding-left: 5px;
+        #padding-top: 5px;
+    }
+    #testimonial-section1 .owl-buttons {
+        padding-left: 0;
+    }
+    .wa_main_bn_wrap .owl-theme .owl-pagination {
+        bottom: 10px;
+    }
+    .special-area-widthfull {
+        width: 100%;
+    }
+    .dark-button,
+    .wa-button {
+        margin-bottom: 5px;
+    }
+    .service-box .wa-box-style3 {
+        padding-bottom: 30px;
+    }
+    .testimonial-heading h1 {
+        font-size: 26px;        
+		text-align:center;
+		margin-bottom: 60px;
+    }
+    .testimonial-block blockquote {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        padding: 30px 0px 0px;
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .signature.pull-right {
+        width: 100%;
+        padding-top: 15px;
+    }
+    .masonary-block figure {
+        max-height: 250px;
+        overflow: hidden;
+    }
+    .home-form.marLessB80 {
+        margin: 0px 0px 30px;
+    }
+    .news-letter-heading {
+        background-size: 60px 60px;
+        padding-left: 75px;
+    }
+    .news-letter-heading h2 {
+        font-size: 24px;
+    }
+    .theme-style-caption-text:before {
+        top: -40%;
+    }
+    .theme-style-caption h4 {
+        font-size: 16px;
+    }
+    .theme-style-caption h5 {
+        font-size: 14px;
+    }
+    .rev-content h4,
+    .rev-content .icon-list {
+        padding: 0px;
+    }
+    .block-caption.blog-list-caption {
+        padding: 30px 0px;
+    }
+    .order-table {
+        display: table;
+        min-height: 120px;
+        width: 100%;
+    }
+    .order-table-cell {
+        display: table-cell;
+        #vertical-align: middle;
+    }
+    .order-text input {
+        margin-top: 40px;
+        display: inline-block;
+    }
+    .order-text h5 {
+        margin-top: 50px;
+        display: inline-block;
+    }
+    .order-text strong {
+        margin-top: 45px;
+        display: inline-block;
+    }
+    .coming-soon-page h1 {
+        font-size: 72px;
+        line-height: 75px;
+        margin: 20px 0px;
+    }
+    .coming-soon-page h3 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .count-area {
+        padding: 40px 0px;
+        font-size: 50px;
+    }
+    .masonary-block .theme-style-caption {
+        display: none;
+    }
+    .masonary-block .figure-caption {
+        margin-bottom: -26px;
+    }
+    .masonary-block ul.social li a {
+        width: 28px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    #top-bar {
+        display: none;
+    }
+    #top-bar .top-bar-icon li a {
+        #margin-top: 10px;
+    }
+	.shape{
+		display:none;
+	}
+    .navbar-toggle {
+        margin-top: 35px;
+    }
+    .navbar-collapse {
+        width: 100%;
+    }
+    .navbar-collapse li a {
+        text-align: left;
+    }
+    .navbar-collapse li a .icon {
+        display: none;
+    }
+    .dropdown-menu>li>a:hover,
+    .dropdown-menu>li>a:focus {
+        color: #2e2e2e;
+    }
+    .collapsible .dropdown-menu li .dropdown-menu {
+        margin-top: 0px;
+        margin-left: 0px;
+        #padding-left: 30px;
+    }
+    .collapsible .dropdown-menu li .dropdown-menu li a {
+        padding-left: 30px;
+    }
+    .open.collapsible .dropdown-menu .has-submenu:after {
+        content: "\f107";
+    }
+    .open.collapsible .dropdown-menu .has-submenu.highlighted:after {
+        content: "\f106";
+    }
+    .wa-heading-style1 h2 {
+        font-size: 18px;
+        max-width: 75%;
+    }
+    .wa-heading-style1 h2:before {
+        content: '';
+        background-image: url('../img/icons/xs-heading-right.png');
+        bottom: calc(48% - 10px);
+        right: -60px;
+        width: 50px;
+    }
+    .wa-heading-style1 h2:after {
+        content: '';
+        background-image: url('../img/icons/xs-heading-left.png');
+        bottom: calc(48% - 10px);
+        left: -60px;
+        width: 50px;
+    }
+    .service-box .wa-box-style3 {
+        padding-bottom: 30px;
+    }
+    .testimonial-heading h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .testimonial-block blockquote {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        padding: 30px 0px 0px;
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .signature.pull-right {
+        width: 100%;
+        padding-top: 15px;
+    }
+    .filter-tab {
+        padding: 10px 10px;
+    }
+    .filter-tab:before,
+    .filter-tab:after {
+        width: 0px;
+    }
+    .mixItUp-center {
+        text-align: center;
+    }
+    .block-caption h4 {
+        font-size: 16px;
+    }
+    .meta-block li {
+        font-size: 12px;
+    }
+    .home-form.marLessB80 {
+        margin: 0px 0px 30px;
+    }
+    .fact-counter h1 {
+        font-size: 26px;
+    }
+    .fact-counter h3 {
+        font-size: 18px;
+    }
+    .news-letter-heading {
+        background-position: center top;
+        background-size: 50px 50px;
+        padding-left: 0px;
+        padding-top: 65px;
+    }
+    .news-letter-heading h2 {
+        font-size: 18px;
+        line-height: 1.4em;
+    }
+    .news-letter-heading h2,
+    .news-letter-heading h5,
+    .copy-right,
+    #main-footer ul.social {
+        text-align: center;
+    }
+    #main-footer ul.fliker-image li {
+        #margin-right: 1.3%;
+    }
+    #main-footer ul.social li {
+        display: inline-block;
+        margin: 18px 5px;
+    }
+    .wa-theme-design-block .figure-caption .social li {
+        margin: 0px 4px 0px;
+    }
+    .faqs-accordion h3.ui-state-default {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+    }
+    .faqs-accordion .ui-state-default {
+        padding: 0.4em 2em 0.4em .7em;
+    }
+    .faqs-accordion .ui-icon {
+        width: 26px;
+    }
+    .social-login .social-button {
+        margin-bottom: 20px;
+        max-width: 100%;
+        padding: 10px 0px;
+    }
+    .form-row.text-right {
+        text-align: left;
+    }
+    ul.links-lists,
+    ul.page-lists {
+        margin-bottom: 30px;
+    }
+    .breadcrumb > li {
+        max-width: 57%;
+        font-size: 14px;
+    }
+    .product-images figure {
+        margin-bottom: 30px;
+    }
+    .wa-tabs .tab-btns .tab-btn {
+        margin-bottom: 10px;
+    }
+    .rev-content h4,
+    .rev-content .icon-list {
+        padding: 0px;
+    }
+    .sub-rev-box.depth-2 {
+        margin-left: 20px;
+    }
+    .sub-rev-box.depth-3 {
+        margin-left: 40px;
+    }
+    .sub-rev-box.depth-4 {
+        margin-left: 60px;
+    }
+    .styled-pagination li {
+        margin: 0px 5px 10px 0px;
+    }
+    .styled-pagination {
+        text-align: left;
+    }
+    .block-caption.blog-list-caption {
+        padding: 30px 0px;
+    }
+    .coming-soon-page h1 {
+        font-size: 60px;
+        line-height: 60px;
+        margin: 20px 0px;
+    }
+    .coming-soon-page h3 {
+        font-size: 18px;
+    }
+    .count-area {
+        padding: 35px 0px;
+        font-size: 48px;
+    }
+    .modal-body iframe {
+        max-height: 250px;
+    }
+    .masonary-block {
+        max-height: 100%;
+    }
+    .container .mix {
+        width: 100%;
+        #margin-bottom: 30px;
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .pad-s30 {
+        padding: 0px 30px;
+    }
+    .pad-s15 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .marB-s30 {
+        margin-bottom: 30px;
+    }
+    .sidebar-tab .padL0 {
+        padding: 0px 15px;
+    }
+    .sidebar-tab .tab-btns {
+        margin-bottom: 15px;
+    }
+    .home-sign-up {
+        margin-left: 15px;
+        margin-right: 15px;
+        width: calc(100% - 30px);
+    }
+    .home-sign-up.pad40,
+    .tabs-container.pad40 {
+        padding: 30px;
+    }
+    .special-style {
+        width: 100%;
+    }
+    .wa-partners .owl-buttons {
+        #padding-left: 5px;
+        #padding-top: 5px;
+    }
+    #testimonial-section1 .owl-buttons {
+        padding-left: 0;
+    }
+    .wa_main_bn_wrap figcaption span,
+    .wa_main_bn_wrap figcaption p,
+    .wa_main_bn_wrap .owl-pagination {
+        display: none;
+    }
+    .wa_main_bn_wrap figcaption h2 span {
+        display: block;
+        line-height: inherit;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .wa_main_bn_wrap figcaption h2 {
+        font-size: 30px;
+    }
+    .wa_main_bn_wrap figure figcaption {
+        margin: 0px;
+        padding: 0px 15%;
+        top: 20%;
+    }
+    .wa_main_bn_wrap .owl-theme .owl-pagination {
+        bottom: 10px;
+    }
+    .marLessT150 {
+        margin-top: 0px;
+    }
+    .error-page,
+    .error-page .social,
+    .error-page .row.pull-left,
+    .error-page .col-md-12.text-center {
+        text-align: left;
+        float: left;
+    }
+    .navbar-default .navbar-brand {
+        padding: 8px;
+    }
+    .dark-button,
+    .wa-button {
+        margin-bottom: 5px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 480px) {
+    .pad-s30 {
+        padding: 0px 30px;
+    }
+    .pad-s15 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .marB-s30 {
+        margin-bottom: 30px;
+    }
+    .sidebar-tab .padL0 {
+        padding: 0px 15px;
+    }
+    .sidebar-tab .tab-btns {
+        margin-bottom: 15px;
+    }
+    .home-sign-up {
+        margin-left: 15px;
+        margin-right: 15px;
+        width: calc(100% - 30px);
+    }
+    .home-sign-up.pad40,
+    .tabs-container.pad40 {
+        padding: 30px;
+    }
+    .special-style {
+        width: 100%;
+    }
+    #testimonial-section1 .owl-buttons {
+        padding-left: 0;
+    }
+    .wa_main_bn_wrap figcaption span,
+    .wa_main_bn_wrap figcaption p,
+    .wa_main_bn_wrap .wa-button,
+    .wa_main_bn_wrap .owl-pagination {
+        display: none;
+    }
+    .wa_main_bn_wrap figcaption h2 span {
+        display: block;
+        line-height: inherit;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .wa_main_bn_wrap figcaption h2 {
+        font-size: 22px;
+    }
+    .wa_main_bn_wrap figure figcaption {
+        margin: 0px;
+        padding: 0px 15%;
+        top: 30%;
+    }
+    .wa_main_bn_wrap .owl-theme .owl-pagination {
+        bottom: 10px;
+    }
+    .marLessT150 {
+        margin-top: 0px;
+    }
+    .error-page,
+    .error-page .social,
+    .error-page .row.pull-left,
+    .error-page .col-md-12.text-center {
+        text-align: left;
+        float: left;
+    }
+    .navbar-default .navbar-brand {
+        padding: 8px;
+    }
+    .dark-button,
+    .wa-button {
+        margin-bottom: 5px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .sidebar-tab .padL0 {
+        padding: 0px 15px;
+    }
+    .sidebar-tab .tab-btns {
+        margin-bottom: 15px;
+    }
+    .pad-s30 {
+        padding: 0px 30px;
+    }
+    .pad-s15 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .marB-s30 {
+        margin-bottom: 30px;
+    }
+    .home-sign-up {
+        margin-left: 15px;
+        margin-right: 15px;
+        width: calc(100% - 30px);
+    }
+    .home-sign-up.pad40,
+    .tabs-container.pad40 {
+        padding: 30px;
+    }
+    .special-style {
+        width: 100%;
+    }
+    .wa-partners .owl-buttons {
+        #padding-left: 5px;
+        #padding-top: 5px;
+    }
+    #testimonial-section1 .owl-buttons {
+        padding-left: 0;
+    }
+    .wa_main_bn_wrap figcaption span,
+    .wa_main_bn_wrap figcaption p,
+    .wa_main_bn_wrap .wa-button,
+    .wa_main_bn_wrap .owl-pagination {
+        display: none;
+    }
+    .wa_main_bn_wrap figcaption h2 span {
+        display: block;
+        line-height: inherit;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .wa_main_bn_wrap figcaption h2 {
+        font-size: 18px;
+    }
+    .wa_main_bn_wrap figure figcaption {
+        margin: 0px;
+        padding: 0px 15%;
+        top: 30%;
+    }
+    .wa_main_bn_wrap .owl-theme .owl-pagination {
+        bottom: 10px;
+    }
+    .marLessT150 {
+        margin-top: 0px;
+    }
+    .error-page,
+    .error-page .social,
+    .error-page .row.pull-left,
+    .error-page .col-md-12.text-center {
+        text-align: left;
+        float: left;
+    }
+    .navbar-default .navbar-brand {
+        padding: 8px;
+    }
+    .dark-button,
+    .wa-button {
+        margin-bottom: 5px;
+    }
+}

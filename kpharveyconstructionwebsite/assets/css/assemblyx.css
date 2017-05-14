@@ -1,0 +1,13 @@
+.ax-socialmediamobile{
+	margin-top:25px;
+}
+
+.ax-socialmediamobile a{
+	font-size:30px;
+	margin-right:25px;
+	color:#fff;
+}
+
+.ax-socialmedia a:hover{
+	color:#a81d3c;
+}

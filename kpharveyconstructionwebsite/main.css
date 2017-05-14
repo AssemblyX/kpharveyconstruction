@@ -1,0 +1,104 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	Constructly - Contruction - Architecture - HTML5 Template
+Version:	1.0.0
+Assigned to:	Themeforest
+Primary use:	Contruction, Architecture, Charity, Creative Agency 
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Body
+2. Common Css
+	2.1 Form Inputs
+	2.2 Blockquote
+	2.3 Button Style
+	2.4 Social button
+	2.5 Padding Style
+	2.6 Margin Style	  
+3. Header Style
+4. Navbar Style
+5. Main Slider
+6. Heading Style
+7. Services Box Style
+8. Default Boxes Style
+9. Team style
+10. Testimonial style
+11. Project Filter Style
+12. Blog Caption Style
+13. Our Client Carousel
+14. Hire Us Section
+	14.1 Hire us form
+	14.2 Fun Facts Style
+15. Products Caption
+16. Newsletter Area
+17. Social icon
+18. Background image style
+19. Page Header Style
+20. Error Page Style
+21. FAQs Section
+22. Sidebar Style
+23. Comment Area
+24. Owl Carousel Style
+25. Pagination Style
+26. Tabs Style
+27. Login Page
+28. Shop page elements
+29. Preloader Style
+30. Common Other pages
+31. Widget Style
+32. Footer Style
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Color codes]
+
+Background:	#ffffff/#000/#ffbd00 (white or black or bright yellow)
+Content:	#777 (Similar grey)
+Header h1:	#000/#2e2e2e (black and drak gray touch)
+Header h2:	#000/#2e2e2e (black and drak gray touch)
+Header h3:	#000/#2e2e2e (black and drak gray touch)
+Header h4:	#000/#2e2e2e (black and drak gray touch)
+Header h5:	#000/#2e2e2e (black and drak gray touch)
+Header h6:	#000/#2e2e2e (black and drak gray touch)
+Footer:		#1a1a1a (dark gray)
+
+
+a (standard): #2e2e2e/#000/#fff/#ffbd00 (Similar black and black or white or bright yellow)
+a (visited):  #2e2e2e/#000/#fff/#ffbd00 (Similar black and black or white or bright yellow)
+a (hover):	  #ffbd00 (bright yellow)
+a (active):	  #ffbd00 (bright yellow)
+
+Hover :		#ffbd00 (bright yellow)
+--------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Typography]
+
+Body copy:		14px/1.6em 'Montserrat', sans-serif;
+Headers:		28px/1.6em 'BEBAS';
+Input, textarea: 14px 'Montserrat', sans-serif;
+Sidebar heading:	18px/1.6em 'BEBAS';
+
+-------------------------------------------------------------------*/
+
+/* Bootstrap core CSS*/
+@import url("assets/css/bootstrap.min.css");
+
+
+/*Plugins CSS */	
+@import url("assets/plugins/font-awesome/css/font-awesome.min.css");
+@import url("assets/plugins/iconfont/iconfont.css");
+@import url("assets/plugins/menu/css/hover-dropdown-menu.css");
+@import url("assets/plugins/owl-carousel/css/owl.carousel.css"); 
+@import url("assets/plugins/fancymedia/css/jquery.fancybox.css");
+@import url("assets/css/jquery-ui.css");
+
+/*Defaults CSS SETTINGS */	
+@import url("assets/css/style.css");
+
+/*Template Media Query CSS */
+@import url("assets/css/responsive.css");
