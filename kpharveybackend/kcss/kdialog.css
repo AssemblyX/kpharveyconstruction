@@ -1,0 +1,29 @@
+.dialogbuttonicon{
+	margin-right:8px;
+}
+
+.ui-dialog-buttonpane{
+	
+}
+
+.ui-dialog-buttonset{
+	
+}
+
+.dalogtitlediv{
+	float:left;
+}
+
+.dalogtitlebuttondiv{
+	float:right;
+
+}
+
+.dalogtitlebutton{
+	margin-left:5px;
+	padding:3px;
+}
+
+.dalogtitlebuttonicon{
+	font-size:18px;
+}

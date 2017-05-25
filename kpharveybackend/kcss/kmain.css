@@ -1,0 +1,20 @@
+*, .html{
+    font-family: "Roboto",sans-serif;
+    margin:0;
+    padding:0;
+	cursor:default;
+	list-style:none;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+body{
+	background-color:rgba(255, 255, 255, 1);
+}
+
+input[type="text"] {
+	text-indent:5px;
+}

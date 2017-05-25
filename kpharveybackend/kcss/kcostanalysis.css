@@ -1,0 +1,164 @@
+.costanalysisheaderoptions{
+	float:left;
+	margin-right:10px;
+}
+
+.costanalysisset{
+    float:left;
+    border:1px solid #484848;
+}
+
+.costanalysistitle{
+    background-color:#484848;
+    color:#fff;
+    margin-bottom:5px;
+    padding:5px;
+    font-style:italic;
+    font-weight:bold;
+}
+#tabs-5{
+    height:400px;
+    overflow:auto;
+}
+
+.costanalysistitlelable{
+    margin-left:10px;
+}
+
+.costanalysisul{
+    float:left;
+    height:300px;
+    width: 220px;
+    overflow: hidden;
+    overflow-y:auto;
+    border:1px solid #000;
+    padding:3px;
+    margin-left:10px;
+    margin-bottom:10px;
+}
+
+.costanalysisli{
+    border:1px solid #000;
+    margin: 0 0px 2px 0px;
+    padding: 2px;
+    font-size: 12px;
+    width: 200px;
+}
+
+.costanalysisulactive{
+    margin-right:10px;
+}
+
+.costanalysislilable{
+    padding-left:3px;
+    float:left;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width:120px;
+}
+
+.costanalysislilablenoinput{
+    width:160px;
+}
+
+.costanalysisliinputcost{
+    text-align:right;
+}
+
+.costanalysisliinput{
+    float:right;
+    width:40px;
+
+}
+
+.costanalysisliiconinfo{
+    float:left;
+    width:10px;
+}
+
+.costanalysisliiconcal{
+    float:left;
+    width:10px;
+    margin-left:5px;
+}
+
+.costanalysisliiconcalnotset{
+    color:#cc0909;
+}
+
+.costanalysisscheduleselectul{
+
+}
+
+.costanalysisscheduleselectul .ui-selected { 
+    background: #F39814; 
+    color: white; 
+}
+
+.costanalysisscheduleselectmulti{
+     background: #FECA40;
+     user-select:text;
+}
+
+.costanalysisscheduleselectul .ui-selecting { 
+    background: #FECA40; 
+}
+
+.costanalysisgridvertical{
+    writing-mode: vertical-rl;
+    /*text-orientation: upright;*/
+    height:100px;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size:14px;
+}
+
+.costannylysistooltiptd{
+    font-size: 12px;
+}
+
+.costanalysisgriditemtd{
+    width:230px;
+}
+
+.costanalysisgriditemsection{
+    float:left;
+    width:200px;
+    white-space: nowrap;
+    overflow:hidden;
+    font-size:14px;
+    text-overflow:ellipsis;
+    padding-left:3px;
+    font-weight:bold;
+}
+
+.costanalysisgriditem{
+    float:right;
+    width:200px;
+    white-space: nowrap;
+    overflow:hidden;
+    font-size:14px;
+    text-align:right;
+    text-overflow:ellipsis;
+    padding-right:3px;
+}
+
+.costanalysisgridcosttd, .costanalysisgridverticaltd{
+    white-space: nowrap;
+    text-align:center;
+    vertical-align:top;
+    width:60px;
+}
+
+.costanalysisgridcost{
+    float:right;
+    font-size:14px;
+    padding-right:3px;
+    width:60px;
+}
+
+.costanalysislilable2{
+    margin-left:10px   
+}
