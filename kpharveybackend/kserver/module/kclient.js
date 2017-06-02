@@ -24,8 +24,8 @@ module.exports = {
             case "projectlist":
                 projectlist(config);
                 break;
-            case "projectimages":
-                projectimages(config);
+            case "projectfiles":
+                projectfiles(config);
                 break;
         }
     }
@@ -147,10 +147,10 @@ function projectinsert(config){
     });
 }
 
-function projectimages(config){
-    var sql = "SELECT i.image_id, i.image_filename FROM tbl_image i ";
-    sql += "INNER JOIN tbl_project_image_lk pi ON i.image_id = pi.image_id ";
-    sql += "WHERE pi.project_id = '" + config.jsonin.data.project_id + "'";
+function projectfiles(config){
+    var sql = "SELECT f.file_id, f.file_nameorig FROM tbl_file f ";
+    sql += "INNER JOIN tbl_project_file_lk pf ON f.file_id = pf.file_id ";
+    sql += "WHERE pf.project_id = '" + config.jsonin.data.project_id + "'";
     $db.conn().query(sql, function(err, result, fields)
     {
         if(err) throw err;

@@ -1,6 +1,6 @@
 #!/bin/bash
 SITENAME="kpharvey"
-SITEPORT="80"
+SITEPORT="7000"
 #ROOTPATH="/home/kenneth/Documents/github/kpharveyconstruction/kpharveybackend"
 ROOTPATH="/home/kphcnode/backend"
 

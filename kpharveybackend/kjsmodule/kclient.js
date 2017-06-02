@@ -2,6 +2,7 @@
 KPHarvey 
 Client screen
 ***/
+"use strict";
 
 class KClient  {
     constructor(config){
@@ -24,11 +25,7 @@ class KClient  {
     	};
 
 		this.form = {
-			study_name:$('<input type="text" placeholder="Sponsor"></input>'),
-			study_protocol_number:$('<input type="text" placeholder="Protocol Number"></input>'),
-			study_protocol_number:$('<input type="text" placeholder="Protocol Number"></input>'),
-			study_createdate:"",
-			project:[]
+			projects:[]
 		}
 
 		this.tabs = {};
@@ -50,14 +47,30 @@ class KClient  {
 			e.preventDefault();
     		self.$dialog.dialog("close");
     	});
-    	
-//     	var $file = $('<button type="button" class="dalogtitlebutton"><i class="fa fa-paperclip dalogtitlebuttonicon" aria-hidden="true"></i></button>');
-//     	$file.on("click", function(e){
-// 			e.stopPropagation() 
-// 			e.preventDefault();
-// 			new KFileupload();
 
-// 		});
+    	var $note = $('<button type="button" class="dalogtitlebutton"><i class="fa fa-comment-o dalogtitlebuttonicon" aria-hidden="true"></i></button>');
+    	$note.on("click", {config:this.config}, function(e){
+			e.stopPropagation() 
+			e.preventDefault();
+			self.noteadd();
+
+		});
+    	
+    	var $file = $('<button type="button" class="dalogtitlebutton"><i class="fa fa-paperclip dalogtitlebuttonicon" aria-hidden="true"></i></button>');
+    	$file.on("click", {json:this.config}, function(e){
+			e.stopPropagation() 
+			e.preventDefault();
+			var $active = KForm.getactivetab(self.tabs.$ul);
+			if($active){
+				var obj = {};
+				obj.id = $($active).data('project_id');
+				obj.tbl = 'project';
+				e.data.json.lookupconfig = JSON.stringify(obj);
+				new KFileupload(e.data.json, self);
+			}else{
+				new KMsg("A project must be selected.", "error");
+			}
+		});
 
     	var $add = $('<button type="button" class="dalogtitlebutton"><i class="fa fa-plus-circle dalogtitlebuttonicon" aria-hidden="true"></i></button>');
     	$add.on("click", function(e){
@@ -74,7 +87,7 @@ class KClient  {
 
 		});
 
-		$divtitlebuttons.append($add, $archive, $close);
+		$divtitlebuttons.append($note, $file, $add, $archive, $close);
 
 		config.width = 800;
 		config.height = 600;
@@ -85,6 +98,10 @@ class KClient  {
 		this.$dialog = new KDialog(config);
 		this.wincreated = true;
 
+    }
+
+    filecallback(){
+		console.log("filecallback");
     }
 
     getprojectdata(){
@@ -105,7 +122,10 @@ class KClient  {
 			new KMsg(json.data.msg, "error");
 		}
 
-		if(!this.wincreated)this.makewin();
+		if(!this.wincreated){
+			this.makewin();
+			$( this.tabs.$divtabs ).tabs({ active: 0 });
+		}
 	}
 
     projectadd(){
@@ -174,8 +194,8 @@ class KClient  {
 	}
 
     projectaddtab(json){
-    	var idproject = "project_" + this.uniqueid;
-    	this.uniqueid++;
+    	this.form.projects["project_" + json.project_id] = {};
+    	var idproject = "project_" + json.project_id;
     	var strproject = json.project_name;
     	var obj = {
     		project_id:strproject,
@@ -185,8 +205,8 @@ class KClient  {
     	};
     	this.data.project.push(obj);
 
-
 		var $liproject = $('<li><a href="#'+idproject+'">'+strproject+'</a></li>');
+		$liproject.data('project_id', json.project_id);
 		this.tabs.tabbody[idproject] = $('<div id="'+idproject+'"></div>');
 		this.tabs.tabbody[idproject].append(this.projectbuildform(json));
 		this.tabs.$ul.append($liproject);
@@ -194,29 +214,54 @@ class KClient  {
 		this.tabs.$divtabs.tabs("refresh");
     }
 
-    projectimagesreturn(json, config){
+    projectfilesreturn(json, config){
+
     	for(var i=0; i<json.data.length; i++){
-    		var $filename = config.project_id + "_" + json.data[i].image_id + "."+json.data[i].image_filename.split('.').pop();
-    		var $image = $('<img src="kserver/uploads/'+$filename+'" width="100" />');
-    		config.div.append($image);
+    		var $ext = json.data[i].file_nameorig.split('.').pop();
+    		var $filename = config.project_id + "_" + json.data[i].file_id + "."+$ext;
+    		var $fileorig = json.data[i].file_nameorig;
+    		if(KFileupload.filetype($ext) == FILE_IMAGE){
+				var $image = $('<img src="kserver/uploads/'+$filename+'" width="100" />');
+				this.form.projects["project_" + config.project_id].image.append($image);
+    		}else{
+				var $div = $('<div></div>');
+				$div.text($fileorig);
+				this.form.projects["project_" + config.project_id].file.append($div);
+    		}
     	}
     }
 
-
-
     projectbuildform(json){
-    	var $divform = $('<div></div>');
-		var $constanalysis = $('<button class="dalogtitlebutton"><i class="fa fa-picture-o dalogtitlebuttonicon" aria-hidden="true"></i></button');
-		$constanalysis.on("click", {json:json}, function(e){
-			new KFileupload(e.data.json);
-		});
-		$divform.append($constanalysis);
-		var obj = {
-			div:$divform,
-			project_id:json.project_id
-		}
-		kctrl.send({config:{module:this.type.name, type:"projectimages"}, data:json}, this.projectimagesreturn.bind(this), obj);
-    	return $divform;
+		this.form.projects["project_" + json.project_id] = {
+			note : $('<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"></div>'),
+			image : $('<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"></div>'),
+			file : $('<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom"></div>')
+			
+		};
+
+    	var $div = $('<div></div>');
+
+		$div.append(KForm.accordion({
+			lable:"Notes",
+			div:this.form.projects["project_" + json.project_id].note
+		}));
+
+		$div.append(KForm.accordion({
+			lable:"Pictures",
+			div:this.form.projects["project_" + json.project_id].image
+		}));
+
+		$div.append(KForm.accordion({
+			lable:"Documents",
+			div:this.form.projects["project_" + json.project_id].file
+		}));
+
+
+
+		
+
+		kctrl.send({config:{module:this.type.name, type:"projectfiles"}, data:json}, this.projectfilesreturn.bind(this), json);
+    	return $div;
     }
 
     buildtabs(){

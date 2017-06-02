@@ -1,3 +1,5 @@
+"use strict";
+
 var ksocket = null;
 $( function() {
     "use strict";
@@ -8,8 +10,8 @@ $( function() {
     }
     
     try {
-        ksocket = new WebSocket('ws://159.203.57.230:7001');
-        //ksocket = new WebSocket('ws://localhost:7001');
+        var strServer = "ws://"+SERVERIP+":"+SOCKETPORT;
+        ksocket = new WebSocket(strServer);
     } catch (e){
         console.log('This doesn\'t look like a valid JSON: ', e);
         return;
