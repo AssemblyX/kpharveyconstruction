@@ -51,34 +51,38 @@ class KAdminuser{
     }
 
     modulelist(json){
-    	this.$divcontent.empty()
+    	if(json){
+			this.$divcontent.empty()
+			var $ul = $('<ul class="modulelistul"></ul>');
+			for(var i=0; i<json.data.length; i++){
+				var $li = $('<li class="modulelistli"></li>');
 
-    	var $ul = $('<ul class="modulelistul"></ul>');
-    	for(var i=0; i<json.data.length; i++){
-    		var $li = $('<li class="modulelistli"></li>');
+				var $div = $('<div class="modulelistname modulelistleft modulelistlable"></div>');
+				$div.text(json.data[i].user_login);
+				$li.append($div);
 
-    		var $div = $('<div class="modulelistname modulelistleft modulelistlable"></div>');
-    		$div.text(json.data[i].user_firstname + " " + json.data[i].user_lastname);
-    		$li.append($div);
+				$li.append($('<div style="clear:both"></div>'));
 
-    		$li.append($('<div style="clear:both"></div>'));
+				$div = $('<div class="modulelistemail modulelistleft modulelistlable"></div>');
+				$div.text(json.data[i].user_email);
+				$li.append($div);
 
-    		$div = $('<div class="modulelistemail modulelistleft modulelistlable"></div>');
-    		$div.text(json.data[i].user_email);
-    		$li.append($div);
+				$li.append($('<div style="clear:both"></div>'));
 
-
-    		$li.append($('<div style="clear:both"></div>'));
-
-    		$ul.append($li);
+				$ul.append($li);
+			}
+			this.$divcontent.append($ul);
+			if(!this.wincreated)this.makewin();
     	}
-    	this.$divcontent.append($ul);
-    	if(!this.wincreated)this.makewin();
     }
 
 	moduleinsert(){
 		for(var i=0; i<this.moduleform.length; i++){
-			this.moduleform[i].value = this.moduleform[i].input.val();
+			if(this.moduleform[i].name != "user_password"){
+				this.moduleform[i].value = this.moduleform[i].input.val();
+			}else{
+				this.moduleform[i].value = sha512(this.moduleform[i].input.val());
+			}
 		}
 		var data = {};
 		data.insert = this.moduleform;

@@ -1,0 +1,55 @@
+.clientimagecore{
+	margin-bottom:10px;
+	border:1px solid #000;
+}
+
+.clientimagediv{
+	float:left;
+	height:150px;
+	width:150px;
+	background:no-repeat center;
+	border-right:1px solid #000;
+}
+
+.clientimagedate{
+	position:absolute;
+	width:150px;
+	margin-top:124px;
+	background-color:rgba(255, 255, 255, 0.3);
+	padding:4px 0px;
+	text-align:center;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.clienticontool{
+	cursor:pointer;
+}
+
+.clienticontoolbutton{
+	margin:2px 5px;
+}
+
+.clientimagetext{
+	margin-top:5px;
+	float:left;
+	height:140px;
+	width:450px;
+	padding:5px;
+	
+	resize: none;
+	margin-left:3px;
+}
+
+.clientimagetools{
+	background-color:rgba(255, 255, 255, 0.3);
+}
+
+.clienticondelete{
+	float:right;
+	margin-top:5px;
+}
+
+.clientimagetextdiv{
+	float:left;
+}

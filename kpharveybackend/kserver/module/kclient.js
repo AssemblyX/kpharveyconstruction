@@ -9,17 +9,11 @@ var $db = require('./../../kservercore/kdatabase');
 module.exports = {
     filter: function(config){
         switch(config.jsonin.config.type){
-            case "insert":
-                moduleinsert(config);
-                break;
-            case "list":
-                modulelist(config);
-                break;
             case "idtext":
                 idtext(config);
                 break;
-            case "projectinsert":
-                projectinsert(config);
+            case "list":
+                modulelist(config);
                 break;
             case "projectlist":
                 projectlist(config);
@@ -27,8 +21,54 @@ module.exports = {
             case "projectfiles":
                 projectfiles(config);
                 break;
+            case "insert":
+            case "projectinsert":
+            case "fileremove":
+                secure(config);       
+                break;
         }
     }
+}
+
+function secure(config){
+    var secureconfig = {
+        config : config,
+        callback : "",
+        position : ""
+    }
+    var type = config.jsonin.config.type;
+    switch(config.jsonin.config.type){
+        case "idtext":
+            secureconfig.callback = idtext;
+            secureconfig.position = 1;
+            break;
+        case "list":
+            secureconfig.callback = modulelist;
+            secureconfig.position = 1;
+            break;
+        case "insert":
+            secureconfig.callback = moduleinsert;
+            secureconfig.position = 2;
+            break;
+        case "projectinsert":
+            secureconfig.callback = projectinsert;
+            secureconfig.position = 3;
+            break;
+        case "projectlist":
+            secureconfig.callback = projectlist;
+            secureconfig.position = 4;
+            break;
+        case "projectfiles":
+            secureconfig.callback = projectfiles;
+            secureconfig.position = 5;
+            break;
+        case "fileremove":
+            secureconfig.callback = fileremove;
+            secureconfig.position = 6;
+            break;
+
+    }
+    $db.secure(secureconfig);
 }
 
 function idtext(config){
@@ -44,14 +84,75 @@ function idtext(config){
 function moduleinsert(config){
     var data = config.jsonin.data.insert;
     var idxname = data.findIndex(x => x.name=="client_name");
-    var sql = "SELECT client_name FROM tbl_client where client_name = '" + data[idxname].value + "'";
-    $db.conn().query(sql, function(err, result, fields) 
+    var idxlogin = data.findIndex(x => x.name=="user_login");
+    var idxpass = data.findIndex(x => x.name=="user_password");
+    var sql = "SELECT client_name FROM tbl_client where client_name = ?";
+    var post = [data[idxname].value];
+
+    $db.conn().query(sql, post, function(err, result, fields) 
     {
         if(err) throw err;
         if(result.length == 0){
-            config.jsonin.data.tbl = "tbl_client";
-            $db.basicinsert(config);
-            console.log(data);
+
+            var sql = "SELECT user_id FROM tbl_user where user_login = ?";
+            var post = [data[idxlogin].value]
+            $db.conn().query(sql, post, function(err, result, fields) 
+            {
+                if(err) throw err;
+                if(result.length == 0){
+                    var sql = "INSERT INTO tbl_client SET ?";
+                    var post = {
+                        client_name : data[idxname].value
+                    };
+                    $db.conn().query(sql, post, function(err, result, fields) 
+                    {
+                        if(err) throw err;
+                        var $client_id = result.insertId;
+                        config.jsonout.data = $client_id;
+                        
+    
+                        var sql = "INSERT INTO tbl_user SET ?";
+                        var post = {
+                            user_login : data[idxlogin].value,
+                            user_password : data[idxpass].value
+                        };
+
+                        $db.conn().query(sql, post, function(err, result, fields) 
+                        {
+                            if(err) throw err;
+                            var $user_id = result.insertId;
+                            var sql = "INSERT INTO tbl_user_type_lk SET ?"
+                            var post = {
+                                user_id:$user_id,
+                                user_type_id:2
+                            }
+                            $db.conn().query(sql, post, function(err, result, fields) 
+                            {
+                                if(err) throw err;
+
+                                var sql = "INSERT INTO tbl_user_client_lk SET ?"
+                                var post = {
+                                    user_id:$user_id,
+                                    client_id:$client_id,
+                                    role_id:1
+                                }
+                                $db.conn().query(sql, post, function(err, result, fields) 
+                                {
+                                    if(err) throw err;
+                                    $db.senddata( config );
+                                });
+                            });
+                        });
+                    });
+                }else{
+                    var obj = {
+                        error:true,
+                        msg:"User name exists."
+                    }
+                    config.jsonout.data = obj;
+                    $db.senddata(config);
+                }
+            });
         }else{
             var arrerror = [];
             var strerror = "";
@@ -103,21 +204,29 @@ function projectinsert(config){
     
     var sql = "SELECT p.project_name FROM tbl_project p ";
     sql += "INNER JOIN tbl_client_project_lk cp ON p.project_id = cp.project_id ";
-    sql += "WHERE cp.client_id = '" + client_id + "' AND p.project_name = '" + data[idxname].value + "' and p.project_active = 1";
+    sql += "WHERE cp.client_id = ? AND p.project_name = ? and p.project_active = 1";
+    var post = [client_id, data[idxname].value];
 
-    $db.conn().query(sql, function(err, result, fields) 
+    $db.conn().query(sql, post, function(err, result, fields) 
     {
         if(err) throw err;
         if(result.length == 0){
-            var sql = "INSERT INTO tbl_project (project_name) values ('"+data[idxname].value+"')";
-            $db.conn().query(sql, function(err, result, fields) 
+            var sql = "INSERT INTO tbl_project SET ? ";
+            var post = {
+                project_name : data[idxname].value
+            }
+            $db.conn().query(sql, post, function(err, result, fields) 
             {
                 if(err) throw err;
                 
                 var project_id = result.insertId;
                 
-                var sql = "INSERT INTO tbl_client_project_lk (client_id, project_id) values ('"+client_id+"', '"+project_id+"')";
-                $db.conn().query(sql, function(err, result, fields) 
+                var sql = "INSERT INTO tbl_client_project_lk SET ?";
+                var post = {
+                    client_id : client_id,
+                    project_id : project_id
+                }
+                $db.conn().query(sql, post, function(err, result, fields) 
                 {
                     config.jsonout.data = project_id;
                     $db.senddata( config );
@@ -147,11 +256,25 @@ function projectinsert(config){
     });
 }
 
+function fileremove(config){
+    var file_id = config.jsonin.data;
+    var sql = "UPDATE tbl_file SET file_active = 0 WHERE file_id = ?";
+    var post = [file_id]
+    $db.conn().query(sql, post, function(err, result, fields)
+    {
+        if(err) throw err;
+        config.jsonout.data = result;
+        $db.senddata(config);     
+    });
+}
+
 function projectfiles(config){
-    var sql = "SELECT f.file_id, f.file_nameorig FROM tbl_file f ";
+    var sql = "SELECT f.file_id, f.file_nameorig, f.file_createdate FROM tbl_file f ";
     sql += "INNER JOIN tbl_project_file_lk pf ON f.file_id = pf.file_id ";
-    sql += "WHERE pf.project_id = '" + config.jsonin.data.project_id + "'";
-    $db.conn().query(sql, function(err, result, fields)
+    sql += "WHERE pf.project_id = ? AND f.file_active = 1";
+    var post = [config.jsonin.data.project_id];
+
+    $db.conn().query(sql, post, function(err, result, fields)
     {
         if(err) throw err;
         config.jsonout.data = result;

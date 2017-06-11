@@ -1,10 +1,10 @@
 "use strict";
 
-var $sockettitle = "kpharvey-websocket"
-var $serverport  = 7000;
-var $socketport = 7001;
-var $fileport = 7002;
-var $lookupid = "project_id";
+var $sockettitle    = "kpharvey-websocket"
+var $serverport     = 7000;
+var $socketport     = 7001;
+var $fileport       = 7002;
+var $lookupid       = "project_id";
 
 var $dbconfig = {
     host     : 'localhost',

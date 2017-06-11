@@ -1,0 +1,17 @@
+.login{
+    
+    padding:10px;
+    width:195px;
+    margin-top:5px;
+}
+
+.loginuser, .loginpass{
+    margin-bottom:10px;
+
+}
+
+.loginlable{
+    font-size:12px;
+    margin-bottom:3px;
+    
+}

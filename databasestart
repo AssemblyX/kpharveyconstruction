@@ -1,0 +1,29 @@
+LOCK TABLES `tbl_module` WRITE;
+/*!40000 ALTER TABLE `tbl_module` DISABLE KEYS */;
+INSERT INTO `tbl_module` VALUES (1,'user'),(2,'client');
+/*!40000 ALTER TABLE `tbl_module` ENABLE KEYS */;
+UNLOCK TABLES;
+
+LOCK TABLES `tbl_role` WRITE;
+/*!40000 ALTER TABLE `tbl_role` DISABLE KEYS */;
+INSERT INTO `tbl_role` VALUES (1,'Admin');
+/*!40000 ALTER TABLE `tbl_role` ENABLE KEYS */;
+UNLOCK TABLES;
+
+LOCK TABLES `tbl_user` WRITE;
+/*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
+INSERT INTO `tbl_user` VALUES (1,'Kevin','Harvey','kevin','5dfe55879638e99cc14a1d4730238936207b92050ef3cd24ae64d52d773084485b55b00f835a076bdc8f8c307ab5eb183eaf332867a2b6f47557d913234f2973','kevin@kphc.ca',1), (2,NULL,NULL,'assemblyx','b9f5faa3915e28d2f9b002b298b594098ed74594a6972c0fbccc9f24b27ceed0022a81df2ce3cb6a7bdbfe8cbb3ac9998260bb4dce4413b5e3a27966e340b1f8','k@assemblyx.net',1);
+/*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+LOCK TABLES `tbl_user_type` WRITE;
+/*!40000 ALTER TABLE `tbl_user_type` DISABLE KEYS */;
+INSERT INTO `tbl_user_type` VALUES (1,'System'),(2,'Client');
+/*!40000 ALTER TABLE `tbl_user_type` ENABLE KEYS */;
+UNLOCK TABLES;
+
+LOCK TABLES `tbl_user_type_lk` WRITE;
+/*!40000 ALTER TABLE `tbl_user_type_lk` DISABLE KEYS */;
+INSERT INTO `tbl_user_type_lk` VALUES (1,1),(1,2);
+/*!40000 ALTER TABLE `tbl_user_type_lk` ENABLE KEYS */;
+UNLOCK TABLES;

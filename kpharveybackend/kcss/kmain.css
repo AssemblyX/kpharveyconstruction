@@ -18,3 +18,7 @@ body{
 input[type="text"] {
 	text-indent:5px;
 }
+
+.mainfloatright{
+	float:right;
+}

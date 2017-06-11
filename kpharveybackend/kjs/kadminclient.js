@@ -75,7 +75,11 @@ class KAdminclient{
 
 	moduleinsert(){
 		for(var i=0; i<this.moduleform.length; i++){
-			this.moduleform[i].value = this.moduleform[i].input.val();
+			if(this.moduleform[i].name != "user_password"){
+				this.moduleform[i].value = this.moduleform[i].input.val();
+			}else{
+				this.moduleform[i].value = sha512(this.moduleform[i].input.val());
+			}
 		}
 		var data = {};
 		data.insert = this.moduleform;
@@ -105,7 +109,21 @@ class KAdminclient{
 			type:"text",
 			name:"client_name",
 			lable:"Name",
-			input:$('<input type="text" value="Assemblyx"></input>')
+			input:$('<input type="text" value=""></input>')
+		});
+
+        this.moduleform.push({
+			type:"text",
+			name:"user_login",
+			lable:"Login",
+			input:$('<input type="text" value=""></input>')
+		});
+
+        this.moduleform.push({
+			type:"text",
+			name:"user_password",
+			lable:"Password",
+			input:$('<input type="text" value=""></input>')
 		});
 
         var $divcontent = $('<div></div>');
@@ -124,6 +142,7 @@ class KAdminclient{
 
     	$divtitlebuttons.append($close);
 		
+		config.modal = true;
 		config.title = $divtitle;
 		config.titlebuttons = $divtitlebuttons;
 		config.content = $divcontent;

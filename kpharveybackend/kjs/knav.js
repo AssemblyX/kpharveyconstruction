@@ -1,8 +1,6 @@
 class KNav{
     constructor(){
         var $nav = $('<nav></nav>');
-        var $logoimg = $('<img src="images/logo.png" alt="KP Harvey Constrution" class="navlogoimage" />')
-        $nav.append($logoimg);
         var $ulcore = $('<ul></ul>');
 
         var $liadmin = KNav.createli({type:"drop", href:"Admin"})
