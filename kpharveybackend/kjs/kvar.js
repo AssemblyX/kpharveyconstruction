@@ -1,6 +1,7 @@
 "use strict";
 
 const SERVERIP    = "159.203.57.230";
+const SERVERHOST  = "kphcprojects.ca";
 //const SERVERIP      = "localhost";
 const SERVERPORT    = 7000;
 const SOCKETPORT    = 7001;

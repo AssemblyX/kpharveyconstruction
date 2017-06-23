@@ -111,35 +111,35 @@ class KAdminuser{
 			type:"text",
 			name:"user_firstname",
 			lable:"First",
-			input:$('<input type="text" value="Kenneth"></input>')
+			input:$('<input type="text" value=""></input>')
 		});
 
 		this.moduleform.push({
 			type:"text",
 			name:"user_lastname",
 			lable:"Last",
-			input:$('<input type="text" value="Desormeaux"></input>')
+			input:$('<input type="text" value=""></input>')
 		});
 
 		this.moduleform.push({
 			type:"text",
 			name:"user_login",
 			lable:"Login",
-			input:$('<input type="text" value="AssemblyX"></input>')
+			input:$('<input type="text" value=""></input>')
 		});
 
 		this.moduleform.push({
 			type:"text",
 			name:"user_password",
 			lable:"Password",
-			input:$('<input type="text"  value="Password"></input>')
+			input:$('<input type="text"  value=""></input>')
 		});
 
 		this.moduleform.push({
 			type:"text",
 			name:"user_email",
 			lable:"Email",
-			input:$('<input type="text" value="kd@assemblyx.net"></input>')
+			input:$('<input type="text" value=""></input>')
 		});
 
         var $divcontent = $('<div></div>');

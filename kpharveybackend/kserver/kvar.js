@@ -5,6 +5,7 @@ var $serverport     = 7000;
 var $socketport     = 7001;
 var $fileport       = 7002;
 var $lookupid       = "project_id";
+var $certfolder      = "kphcprojects.ca";
 
 var $dbconfig = {
     host     : 'localhost',
@@ -20,7 +21,12 @@ module.exports = {
     fileport:fileport,
     sockettitle:sockettitle,
     dbconfig:dbconfig,
-    lookupid:lookupid
+    lookupid:lookupid,
+    certfolder:certfolder
+}
+
+function certfolder(){
+    return $certfolder;
 }
 
 function fileport(){

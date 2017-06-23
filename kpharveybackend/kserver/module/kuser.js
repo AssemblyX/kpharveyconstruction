@@ -10,8 +10,8 @@ var reCAPTCHA = require('recaptcha2');
 var sha512 = require('js-sha512').sha512;
 var $module = "user";
 
-var PUBLIC_KEY  = '6Le2MCQUAAAAAMCOprc1GNX0h5gZswydRySwqkS7';
-var PRIVATE_KEY = '6Le2MCQUAAAAAJqQrNvZyM3nv0CRLHYeVXVzWg39';
+var PUBLIC_KEY  = '6LfDriYUAAAAAInl0f0F9AUYWkcr4_xmiKYm1qVf';
+var PRIVATE_KEY = '6LfDriYUAAAAAJZHPNkqc4k-yuH2QcTuqtw5K4FX';
 
 module.exports = {
     filter: function(config){

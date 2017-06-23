@@ -13,8 +13,8 @@ class KLogin  {
     constructor(config){
         this.$divcontent = $('<div></div>');
         this.form = {
-            user:$('<input type="text" value="assemblyx"></input>'),
-            pass:$('<input type="password" value="n3thSky3"></input>')
+            user:$('<input type="text" value=""></input>'),
+            pass:$('<input type="password" value=""></input>')
         }
         var $divlogin = $('<div class="login"></div>');
         
@@ -52,7 +52,7 @@ class KLogin  {
 			}
 			config.recaptcha = {
 				button:"Login",
-				sitekey:"6Le2MCQUAAAAAMCOprc1GNX0h5gZswydRySwqkS7",
+				sitekey:"6LfDriYUAAAAAInl0f0F9AUYWkcr4_xmiKYm1qVf",
 				callback:"googlerecaptcha"
 			}	
 		}else{

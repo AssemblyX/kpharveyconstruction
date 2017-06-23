@@ -68,7 +68,7 @@ class KClient  {
 					var obj = {};
 					obj.id = $($active).data('project_id');
 					obj.tbl = 'project';
-					obj.thumbnail = true;
+					obj.thumbnail = FILE_SINGLE_UPLOAD;
 					e.data.json.fileconfig = JSON.stringify(obj);
 					new KFileupload(e.data.json, self.getprojectdata.bind(self));
 				}else{
